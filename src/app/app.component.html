@@ -1,4 +1,9 @@
-
+<!--Event biding-->
+<button [disabled] = "btnDisabled">Send</button>
+<button (click)="toogleButton()">Toogle Button</button>
+<p>Edad {{person.age}}</p>
+<button (click)="addAge()">Add Years</button>
+<hr/>
 <!--property binding for numbers, bool, etc...-->
 <h1>Propiedades</h1>
 <button [disabled] = "btnDisabled">Send</button>

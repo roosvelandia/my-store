@@ -18,4 +18,12 @@ export class AppComponent {
     avatar: 'https://i.seadn.io/gae/HMXjc3fdO98oMW__BMaHRsE05c9IAiH0QepxAdmgi7df1b27yiKSQzq0STXReTmmNOjhL1LJZ-9DXpAUtJIxVBoYS4cFBqgkUTgj?auto=format&w=1000'
 
   }
+
+  toogleButton(){
+    this.btnDisabled = !this.btnDisabled;
+  }
+
+  addAge(){
+    this.person.age++;
+  }
 }
