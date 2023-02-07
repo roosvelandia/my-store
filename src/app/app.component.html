@@ -1,3 +1,17 @@
+
+<!--property binding for numbers, bool, etc...-->
+<h1>Propiedades</h1>
+<button [disabled] = "btnDisabled">Send</button>
+<!--use objects-->
+<input type="text" [value]="person.name">
+<progress max = "100" [value] = "person.age" ></progress>
+<img width="100" [src]= "person.avatar">
+<!--use properties-->
+<input type="text" [value]="name">
+<progress max = "100" [value] = "age" ></progress>
+<img width="100" [src]= "img">
+<hr/>
+<!--string interpolation for strings-->
 <h1> hola mundo </h1>
 <h2> {{'Hola '.repeat(3)}} </h2>
 <p>3 + 4 = {{3+4}}</p>
