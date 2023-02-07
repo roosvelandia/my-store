@@ -1,3 +1,13 @@
+<!--use of NgFor-->
+<h1>NgFor</h1>
+<input type="text" required [(ngModel)]="newFriend" >
+<button (click)="addFriend()">Add name</button>
+  <li *ngFor="let friend of friends; index as i">
+    {{i}} {{friend}}
+    <button (click)="deleteFriend(i)">Delete</button>
+  </li>
+<hr/>
+
 <!--use NgIf-->
 <h1>NgIf</h1>
 <input type="text" required [(ngModel)]="person.name" >

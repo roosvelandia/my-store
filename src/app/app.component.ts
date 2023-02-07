@@ -19,6 +19,9 @@ export class AppComponent {
 
   }
 
+  friends: string[]= ['Sanji','Nami','Brook','chooper'];
+  newFriend = '';
+
   toogleButton(){
     this.btnDisabled = !this.btnDisabled;
   }
@@ -35,5 +38,16 @@ export class AppComponent {
   changeName(event: Event){
     const element= event.target as HTMLInputElement;
     this.person.name = element.value;
+  }
+
+  addFriend(){
+    // used to add an element to the array.
+    this.friends.push(this.newFriend);
+    this.newFriend = '';
+  }
+
+  deleteFriend(index: number){
+    // used to delete.
+    this.friends.splice(index, 1);
   }
 }
