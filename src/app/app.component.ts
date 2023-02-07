@@ -20,7 +20,17 @@ export class AppComponent {
     avatar: 'https://i.seadn.io/gae/HMXjc3fdO98oMW__BMaHRsE05c9IAiH0QepxAdmgi7df1b27yiKSQzq0STXReTmmNOjhL1LJZ-9DXpAUtJIxVBoYS4cFBqgkUTgj?auto=format&w=1000'
 
   }
+  box = {
+    width:100,
+    height:100,
+    background:'red'
+  }
 
+  register ={
+    name: '',
+    email: '',
+    password: ''
+  }
   friends: string[]= ['Sanji','Nami','Brook','chooper'];
   newFriend = '';
 
@@ -71,5 +81,8 @@ export class AppComponent {
   deleteFriend(index: number){
     // used to delete.
     this.friends.splice(index, 1);
+  }
+  onRegister(){
+    console.log(this.register);
   }
 }

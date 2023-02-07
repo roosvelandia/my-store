@@ -1,3 +1,52 @@
+<!--Formulario-->
+<h1>Formulario</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <div class = "input-group">
+    <label for="name">Name</label>
+    <input type="text"  name = "name" required id = "name" [(ngModel)]="register.name" />
+    <p>Mensajes de error</p>
+  </div>
+  <div class = "input-group">
+    <label for="email">Email</label>
+    <input type="email" name = "email" required id="email" [(ngModel)]="register.email" />
+    <p>Mensajes de error</p>
+  </div>
+  <div class = "input-group">
+    <label for="password">Password</label>
+    <input type="password" name = "password" required id="password" [(ngModel)]="register.password" />
+    <p>Mensajes de error</p>
+  </div>
+  <button [disabled]="myForm.invalid" type="submit">Register</button>
+  <button type="button">Action</button>
+</form>
+<hr/>
+<!--NgClass & NgStyle-->
+<h1>NgClass & NgStyle</h1>
+<input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name" />
+<hr class = "line-error"
+  [ngClass]= "{
+    'valid': nameInput4.valid,
+    'invalid': nameInput4.invalid
+  }"
+/>
+<p class="message-error" [class.invalid]="nameInput4.invalid"> The field is required</p>
+<div class="styles">
+  <div>
+    <input type="number"[(ngModel)]="box.width" />
+    <input type="number"[(ngModel)]="box.height" />
+    <input type="color"[(ngModel)]="box.background" />
+  </div>
+  <div>
+    <div [ngStyle]="{
+      'width.px': box.width,
+      'height.px': box.height,
+      'background-color': box.background,
+      'display': 'block'
+    }">
+    </div>
+  </div>
+</div>
+<hr/>
 <!--Class & Style-->
 <h1>Class & Style</h1>
 <input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name" />
@@ -13,6 +62,7 @@
     <img [style.width.px]="widthImg" [src]="person.avatar">
   </div>
 </div>
+<hr/>
 <!--use of NgSwitch-->
 <h1>NgSwitch</h1>
 <input type="text" required [(ngModel)]="person.name" >
