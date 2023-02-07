@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Fruit } from './fruits.model';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,26 @@ export class AppComponent {
 
   friends: string[]= ['Sanji','Nami','Brook','chooper'];
   newFriend = '';
+
+  fruits: Fruit[] = [
+    {
+      name: 'goma goma',
+      berries: 400,
+      image: './assets/images/goma.webp',
+      category: 'Best'
+    },
+    {
+      name: 'hana hana',
+      berries: 100,
+      image: './assets/images/hana.webp',
+      category: 'medium'
+    },
+    {
+      name: 'mera mera',
+      berries: 200,
+      image: './assets/images/mera.webp'
+    }
+  ]
 
   toogleButton(){
     this.btnDisabled = !this.btnDisabled;

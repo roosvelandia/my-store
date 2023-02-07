@@ -1,3 +1,43 @@
+<!--use of NgSwitch-->
+<h1>NgSwitch</h1>
+<input type="text" required [(ngModel)]="person.name" >
+<!-- in case you do it with if
+<p *ngIf="person.name=== 'Robin'">
+  Soy Robin
+</p>
+<p *ngIf="person.name=== 'Luffy'">
+  Soy Luffy
+</p>
+<p *ngIf="person.name=== 'Nami'">
+  Soy Nami
+</p>
+-->
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Robin'">
+    Soy Robin
+  </p>
+  <p *ngSwitchCase="'Luffy'">
+    Soy Luffy
+  </p>
+  <p *ngSwitchCase="'Nami'">
+    Soy Nami
+  </p>
+  <p *ngSwitchDefault>
+    No hace parte de la tripulación
+  </p>
+</div>
+<hr/>
+<!--use of NgFor Objs-->
+<h1>NgFor objects</h1>
+<div class="fruits--grid">
+  <div *ngFor="let fruit of fruits">
+    <img [src]="fruit.image" alt="image">
+    <h2>{{fruit.berries}}</h2>
+    <p>{{fruit.name}}</p>
+  </div>
+</div>
+<hr/>
+
 <!--use of NgFor-->
 <h1>NgFor</h1>
 <input type="text" required [(ngModel)]="newFriend" >
@@ -54,4 +94,4 @@
 <h2> {{'Hola '.repeat(3)}} </h2>
 <p>3 + 4 = {{3+4}}</p>
 <h3>Hola, soy {{name}} tengo {{age}} años</h3>
-<img src={{img}} alt="image">
+<img width="200" src={{img}} alt="image">
