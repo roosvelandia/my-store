@@ -1,4 +1,12 @@
+<!--use NgModel-->
+<h1>NgModel</h1>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" >
+<p> Valid: {{nameInput.valid}}</p>
+<input type="number" max="18" min ="10" required #ageInput="ngModel" [(ngModel)]="person.age" >
+<p> Valid: {{ageInput.valid}}</p>
+<hr/>
 <!--Event biding on click-->
+<h1>Events</h1>
 <button [disabled] = "btnDisabled">Send</button>
 <button (click)="toogleButton()">Toogle Button</button>
 <p>Edad {{person.age}}</p>
