@@ -9,6 +9,7 @@ import { Fruit } from './fruits.model';
 export class AppComponent {
   // when a variable is private i can't access it from html
   //private name = 'roosvell';
+  widthImg = 10;
   name = 'Luffy';
   age = 55;
   img = 'https://i.ytimg.com/vi/ha0-qytMD9k/maxresdefault.jpg'
